@@ -1,0 +1,74 @@
+.date_display {
+    border: 2px solid rgb(173, 163, 163);   
+    padding-top: 0px;
+    height: 40px;
+}
+    .date_display .day {
+        text-align: end;
+    }
+    .date_display .date {
+        text-align: initial;
+    }
+
+.employee_info_dummy {
+    border: 1px solid rgb(173, 163, 163); 
+    height: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.times_list{
+    list-style: none;
+}
+    .times_list .times {
+        list-style: none;
+        border: 1px solid rgb(182, 41, 41); 
+        width: 5.000%;
+        float: left;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+    }
+
+.schdule_display {
+}
+
+.employee_info {
+    border: 3px solid rgb(83, 97, 114);
+    margin: 3px;
+}
+    .employee_info .tech_info {
+        padding: 0;
+        margin: 0;
+    }
+        .employee_info .tech_info .tech_name {
+            border: 1px solid rgb(87, 84, 84);
+            text-align: center;
+        }
+        .employee_info .tech_info .tech_rank {
+            border: 1px solid rgb(87, 84, 84);
+            text-align: center;
+        }
+
+    .employee_info .tech_schedule {
+        margin: 3px;
+        border: 2px solid rgb(83, 97, 114);
+        background-color: rgb(226, 224, 224);
+    }
+
+        .employee_info .tech_schedule .job_description {
+            text-align: center;
+            border-bottom: 1px solid rgb(83, 97, 114);
+        }
+
+        .employee_info .tech_schedule .start_time_display {
+            margin: 0;
+            border-right: 1px solid rgb(83, 97, 114);
+        }
+
+        .employee_info .tech_schedule .end_time_display {
+            margin: 0;
+        }
+

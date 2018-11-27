@@ -1,0 +1,145 @@
+
+table {
+    margin: 5px;
+    padding: 0;
+    align-content: center;
+}
+
+
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(0,0,0);
+    text-align: center;
+    align-content: center;
+}
+
+.day_display,
+.display_standby,
+.name,
+.rank,
+.time_display{
+    text-align: center;
+}
+
+
+/* Color styles for different job/events */
+#ac{
+    background-color: rgb(45, 170, 243);
+}
+#pm {
+    background-color: rgb(71, 255, 71);
+}
+#vacation {
+    background-color: rgb(255, 255, 83);
+    color: crimson;
+}
+#event_time {
+    background-color: rgb(223, 223, 223);
+}
+
+.free_time {
+    border: 1px solid black;
+}
+
+.desktop_schedule {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width:95%;
+}
+
+.mobile_schedule {
+    display: none;
+}
+
+
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 800px
+abd also ipads specifically
+*/
+@media screen and (max-width: 759px) {
+
+    /* Force table to not be like tables anymore */
+    table, thread, tbody, th, td, tr {
+        display: none;
+    }
+    
+    .container {
+        padding: 0;
+    }
+
+    .mobile_schedule {
+        display: inline;
+
+    }
+        .mobile_schedule .mobile_header {
+            border: 5px solid rgb(122, 122, 122);
+            margin: 8px 1px 8px 1px;
+        }
+            .mobile_header .row {
+                margin: 0;
+                padding: 0;
+            }
+            .mobile_header .day_display{
+                text-align: right;
+                font-weight: 600;
+                padding-right: 3px;
+                border-bottom: 3px solid rgb(122, 122, 122);
+            }
+            .mobile_header .date_display{
+                text-align: left;
+                font-weight: 600;
+                padding-left: 3px;
+                border-bottom: 3px solid rgb(122, 122, 122);
+            }
+            .mobile_header .display_standby {
+                border-bottom: 3px solid rgb(122, 122, 122);
+                font-weight: 600;
+            }
+            .mobile_header .name {
+                border-right: 3px solid rgb(122, 122, 122);
+                font-weight: 600;
+            }
+            .mobile_header .rank {
+                font-weight: 600;
+            }
+
+    .mobile_data {
+        align-content: center;
+        border: 5px solid rgb(131, 129, 129);
+        margin: 15px;
+    }
+        .mobile_data .row {
+            margin: 0; 
+            padding: 0;
+        }
+
+        .mobile_data .job_data {
+            margin: 5px;
+            border: 2px solid rgb(122, 122, 122);
+        }
+            .mobile_data .name {
+                border-right: 3px solid rgb(131, 129, 129);
+                border-bottom: 3px solid rgb(131, 129, 129);
+            }
+            .mobile_data .rank {
+                border-bottom: 3px solid rgb(131, 129, 129);
+            }
+
+            .mobile_data .job_data .job_description {
+                text-align: center;
+            }
+
+            .mobile_data .job_data .job_time {
+                text-align: center;
+            }
+                .job_data .time_col_1 {
+                    border-right: 2px solid rgb(122, 122, 122);
+                }
+
+
+}

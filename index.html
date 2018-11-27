@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employee Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--jquery library-->
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <!--BootStrap 3-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="styles3.css">
+
+</head>
+
+<body style="margin: 0; padding: 0;">
+
+    <table class="desktop_schedule" style="max-width: 1200px;">
+
+
+            <tr class="header_row">
+                <th class="day_display" colspan="23">Monday, <span class="date_display">06/06/2018</span></th>
+            </tr>
+
+            <tr class="header_row">
+                <th class="display_standby"colspan="23">ALDON ON STANDBY</th>
+            </tr>
+
+            <tr class="header_row">
+                <th class="name">Name</th>
+                <th class="rank">Rank</th>
+
+                <th class="time_display">07:00</th>
+                <th class="time_display">07:30</th>
+                <th class="time_display">08:00</th>
+                <th class="time_display">08:30</th>
+                <th class="time_display">09:00</th>
+                <th class="time_display">09:30</th>
+                <th class="time_display">10:00</th>
+                <th class="time_display">10:30</th>
+                <th class="time_display">11:00</th>
+                <th class="time_display">11:30</th>
+                <th class="time_display">12:00</th>
+                <th class="time_display">12:30</th>
+                <th class="time_display">01:00</th>
+                <th class="time_display">01:30</th>
+                <th class="time_display">02:00</th>
+                <th class="time_display">02:30</th>
+                <th class="time_display">03:00</th>
+                <th class="time_display">03:30</th>
+                <th class="time_display">04:00</th>
+            </tr>
+
+
+
+        <tbody class="table_contents">
+
+            <!--
+            <tr class="data_row">
+                <td class="name">Dante</td>
+                <td class="rank">WF</td>
+                <td class="event" id="ac" colspan="20" start="07:00" end="04:30">Leward Community Church - Removial of A/C Units for Admin Office Area</td>
+            </tr>
+
+            <tr class="data_row">
+                    <td class="name">Brandon F.</td>
+                    <td class="rank">JM</td>
+                    <td class="event" id="ac" colspan="8">cvzcvzcxvxzcvzxs</td>
+                    <td class="free_time" colspan="12"></td>
+            </tr>
+
+            <tr class="data_row">
+                    <td class="name">Aldon</td>
+                    <td class="rank">JM</td>
+                    <td class="event" id="pm" colspan="10">PM Service - Pearl City</td>
+                    <td class="free_time" colspan="14"></td>
+            </tr>
+
+            <tr class="data_row">
+                    <td class="name">Chad</td>
+                    <td class="rank">5th</td>
+                    <td class="event" id="pm" colspan="6">PM Service - Benihana</td>                   
+                    <td class="event" id="ac" colspan="14">AC Service - Alamoana</td>
+            </tr>
+
+
+            <tr class="data_row">
+                    <td class="name">Derrick</td>
+                    <td class="rank">WF</td>
+                    <td class="event" id="vacation" colspan="20">ON VACATION - RETURN TO WORK ON 06/21/18</td>                   
+            </tr>
+        -->
+
+        </tbody>
+                        
+
+    </table>
+
+    <!--Mobile View-->
+    <div class="container mobile_schedule">
+
+        <div class="mobile_header">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 day_display">Day, </div>
+                <div class="col-xs-6 col-sm-6 date_display">01/01/2018</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 display_standby">SOMEONE ON STANDY</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 name">Name</div>
+                <div class="col-xs-6 col-sm-6 col-md-6 rank">Rank</div>
+            </div>
+        </div>
+        
+        <div class="mobile_content">
+            
+            <!--
+            <div class="mobile_data">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 name">Dante</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 rank">WP</div>
+                </div>
+
+                <dir class="row job_data">
+                    <div class="col-xs-12 col-sm-12 col-md-12 job_description" id="ac">
+                        Leward Community Church - Removial of A/C Units for Admin Office Area
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">07:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">04:30</span>
+                        </div>
+                    </div>
+                </dir>
+            </div>
+
+            <div class="mobile_data">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 name">Brandon F.</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 rank">JM</div>
+                </div>
+
+                <dir class="row job_data">
+                    <div class="col-xs-12 col-sm-12 col-md-12 job_description" id="ac">
+                        adfdascdcasdcsdfads
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">07:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">12:00</span>
+                        </div>
+                    </div>
+                </dir>
+            </div>
+
+            <div class="mobile_data">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 name">Aldon</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 rank">JM</div>
+                </div>
+
+                <dir class="row job_data">
+                    <div class="col-sm-12 col-md-12 job_description" id="pm">
+                        PM Service - Pearl City
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">07:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">12:00</span>
+                        </div>
+                    </div>
+                </dir>
+            </div>
+
+            <div class="mobile_data">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 name">Chad</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 rank">5th</div>
+                </div>
+
+                <dir class="row job_data">
+                    <div class="col-sm-12 col-md-12 job_description" id="pm">
+                        PM Service - Benihana
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">07:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">09:30</span>
+                        </div>
+                    </div>
+                </dir>
+
+                <dir class="row job_data">
+                    <div class="col-sm-12 col-md-12 job_description" id="ac">
+                        AC Service - Ala Moana
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">10:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">04:30</span>
+                        </div>
+                    </div>
+                </dir>
+            </div>
+
+            <div class="mobile_data">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 name">Derrick</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 rank">WF</div>
+                </div>
+
+                <dir class="row job_data">
+                    <div class="col-sm-12 col-md-12 job_description" id="vacation">
+                        ON VACATION - RETURN TO WORK ON 06/21/2018
+                    </div>
+
+                    <div class="row job_time">
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_1" id="event_time">
+                            Start: <span class="start_time">07:00</span>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-6 time_col_2" id="event_time">
+                            End: <span class="end_time">04:30</span>
+                        </div>
+
+                    </div>
+                </dir>
+            </div>
+        -->
+
+        </div>
+    </div>
+
+    <!--Javascript code-->
+    <script src="main.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

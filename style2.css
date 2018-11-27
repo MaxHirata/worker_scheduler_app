@@ -1,0 +1,137 @@
+
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(0,0,0);
+    text-align: center;
+    align-content: center;
+}
+
+table {
+    margin: 5px;
+    padding: 0;
+    align-content: center;
+}
+
+#ac_event {
+    background-color: rgb(41, 152, 216);
+}
+
+#pm_event {
+    background-color: rgb(30, 139, 30);
+}
+
+#vacation_event {
+    background-color: rgb(209, 209, 77);
+    color: crimson;
+}
+
+.event {
+
+}
+
+body:before, .row:after, .row:before {
+    content: none;
+}
+
+.time {
+    content: none;
+    background-color: aquamarine;
+}
+
+.desktop_schedule {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width:95%;
+}
+
+.mobile_header {
+    display: none;
+}
+
+
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 800px
+abd also ipads specifically
+*/
+@media screen and (max-width: 800px) {
+
+    /* Force table to not be like tables anymore */
+    table, thread, tbody, th, td, tr {
+        display: none;
+    }
+
+    .mobile_header {
+        display: inline;
+    }
+
+    /* Hide table headers (but no display: none; for accessibility) */
+    thread tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+    }
+
+    td {
+        /* Behave like a row 
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative; */
+    }
+
+    /*
+    tr.header_row {
+        margin-bottom: 20px;
+    }
+
+    th.name {
+        float: left;
+        padding-left: 20%;
+        padding-right: 20%;
+        
+    }
+
+    th.rank {
+        float: right;
+        padding-left: 18%;
+        padding-right: 20%;
+    }
+
+
+    tr.data_row {
+        padding-top: 5px;
+        padding-bottom: 5px; 
+        margin: 5px;
+    }
+
+
+
+    td.name {
+        float: left;
+        margin-left: 20px; 
+    }
+
+    td.rank {
+        float: right;
+        margin-right: 40px; 
+    }
+
+    td.event{
+        padding-top: 0;
+        margin-top: 30px;
+        
+    }
+
+
+    .time_display {
+        display: none;
+    }
+    */
+}
